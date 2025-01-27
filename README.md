@@ -3,6 +3,4 @@ A web application where freelancers can create profiles showcasing their skills,
 ## Tech Stack
 **Client:** React, Redux, TailwindCSS
 
-**Server:** Node, Express
-
-**Database:** MySQL
+**Backend:** Node, Express, MongoDB
