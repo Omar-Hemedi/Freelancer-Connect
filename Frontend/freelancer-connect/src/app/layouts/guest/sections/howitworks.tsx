@@ -1,6 +1,7 @@
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -31,7 +32,7 @@ const howItWorks: HowItWorksItem[] = [
 
 const HowItWorksSection: React.FC = () => {
     return (
-        <section className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 py-12 lg:py-24">
+        <section className="text-gray-900 dark:text-gray-200 py-12 lg:py-24">
             <div className="container mx-auto">
                 <h2 className="text-3xl lg:text-5xl font-bold text-center mb-12 text-gray-800 dark:text-white">How It Works</h2>
                 
@@ -53,7 +54,7 @@ const HowItWorksSection: React.FC = () => {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.5 }}
                                 >
-                                    <img src={item.img} alt={item.title} className="w-full max-w-md object-cover rounded-lg shadow-lg" />
+                                    <Image src={item.img} alt={item.title} width={500} height={500} className="w-full max-w-md object-cover rounded-lg shadow-lg" />
                                 </motion.div>
                                 <motion.div
                                     className="lg:w-1/2 text-center lg:text-left space-y-4"

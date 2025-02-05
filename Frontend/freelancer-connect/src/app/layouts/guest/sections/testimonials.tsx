@@ -13,7 +13,7 @@ const TestimonialsSection: React.FC = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <p className="text-lg text-gray-600 dark:text-gray-300">
-                            "FreelancerHub has transformed the way I find clients. The platform is easy to use and the support team is always there to help."
+                            &quot;FreelancerHub has transformed the way I find clients. The platform is easy to use and the support team is always there to help.&quot;
                         </p>
                         <div className="mt-4">
                             <h4 className="text-xl font-semibold text-gray-800 dark:text-white">John Doe</h4>
@@ -27,7 +27,7 @@ const TestimonialsSection: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
                         <p className="text-lg text-gray-600 dark:text-gray-300">
-                            "As a client, I appreciate the transparency and ease of finding top talent on FreelancerHub. Highly recommend!"
+                            &quot;As a client, I appreciate the transparency and ease of finding top talent on FreelancerHub. Highly recommend!&quot;
                         </p>
                         <div className="mt-4">
                             <h4 className="text-xl font-semibold text-gray-800 dark:text-white">Jane Smith</h4>
@@ -41,7 +41,7 @@ const TestimonialsSection: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
                         <p className="text-lg text-gray-600 dark:text-gray-300">
-                            "The secure payment system and 24/7 support make FreelancerHub my go-to platform for hiring freelancers."
+                            &quot;The secure payment system and 24/7 support make FreelancerHub my go-to platform for hiring freelancers.&quot;
                         </p>
                         <div className="mt-4">
                             <h4 className="text-xl font-semibold text-gray-800 dark:text-white">Michael Brown</h4>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const AboutSection: React.FC = () => {
     return (
@@ -19,7 +20,7 @@ const AboutSection: React.FC = () => {
                             <div>
                                 <h4 className="text-xl font-semibold text-gray-800 dark:text-white">Verified Freelancers</h4>
                                 <p className="text-gray-600 dark:text-gray-300">
-                                    We ensure quality by verifying freelancers' skills and profiles, so you only work with trusted professionals.
+                                    We ensure quality by verifying freelancers&apos; skills and profiles, so you only work with trusted professionals.
                                 </p>
                             </div>
                         </li>
@@ -58,7 +59,7 @@ const AboutSection: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <img src="/images/system-overview.jpg" alt="System Overview" className="w-full max-w-xl object-cover rounded-lg shadow-2xl" />
+                    <Image src="/images/system-overview.jpg" alt="System Overview" width={500} height={500} className="w-full max-w-xl object-cover rounded-lg shadow-2xl" />
                 </motion.div>
             </div>
         </section>

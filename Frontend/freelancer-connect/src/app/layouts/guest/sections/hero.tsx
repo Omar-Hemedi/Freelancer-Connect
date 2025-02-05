@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const HeroSection: React.FC = () => {
     return (
@@ -40,7 +41,7 @@ const HeroSection: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <img src="/images/freelancers-working.png" alt="Freelancer Working" className="w-full max-w-xl object-cover rounded-lg shadow-2xl" />
+                    <Image src="/images/freelancers-working.png" alt="Freelancer Working" width={500} height={500} className="w-full max-w-xl object-cover rounded-lg shadow-2xl" />
                 </motion.div>
             </div>
         </section>
