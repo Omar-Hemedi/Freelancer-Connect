@@ -1,51 +1,82 @@
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const HeroSection: React.FC = () => {
     return (
-        <section className="relative bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-200">
-            <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-6 py-12 lg:py-20">
-                <motion.div
-                    className="text-center lg:text-left lg:w-1/2 space-y-6"
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
+        <section className="dark:bg-gray-900">
+            <div className="flex flex-col lg:grid lg:grid-cols-12 max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 items-center">
+
+                {/* Left Content */}
+                <motion.div 
+                    initial={{ opacity: 0, x: -50 }} 
+                    animate={{ opacity: 1, x: 0 }} 
+                    transition={{ duration: 0.8, ease: "easeOut" }} 
+                    className="mr-auto place-self-center lg:col-span-7 text-center lg:text-left order-2 lg:order-1"
                 >
-                    <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-gray-800 dark:text-white">
+                    <motion.h1 
+                        initial={{ opacity: 0, scale: 0.9 }} 
+                        animate={{ opacity: 1, scale: 1 }} 
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} 
+                        className="text-4xl lg:text-5xl font-bold leading-tight text-gray-800 dark:text-white"
+                    >
                         Find the Best{" "}
-                        <span className="text-blue-600 dark:text-blue-400">Freelancers</span> for Your Projects
-                    </h1>
-                    <p className="text-lg text-gray-600 dark:text-gray-300">
+                        <span className="text-blue-600 dark:text-blue-400">
+                            Freelancers
+                        </span> for Your Projects
+                    </motion.h1>
+                    <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
                         Connect with top-rated professionals, hire talent, and grow your business.
                     </p>
-                    <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
-                        <Link
-                            href="/register"
-                            className="px-8 py-4 text-white bg-blue-600 rounded-lg text-lg font-semibold hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-all"
-                        >
-                            Get Started
+
+                    {/* CTA Button */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }} 
+                        animate={{ opacity: 1, y: 0 }} 
+                        transition={{ duration: 0.6, delay: 0.4 }} 
+                        className="mt-6 flex flex-col sm:flex-row sm:justify-center lg:justify-start"
+                    >
+                        <Link href="#" className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
+                            Get started
+                            <svg className="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                            </svg>
                         </Link>
-                        <Link
-                            href="/freelancers"
-                            className="px-8 py-4 border border-gray-300 text-lg rounded-lg font-semibold hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-800 transition-all"
-                        >
-                            Browse Freelancers
-                        </Link>
-                    </div>
+                    </motion.div>
                 </motion.div>
 
-                <motion.div
-                    className="lg:w-1/2 flex justify-center"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <Image src="/images/freelancers-working.png" alt="Freelancer Working" width={500} height={500} className="w-full max-w-xl object-cover rounded-lg shadow-2xl" />
-                </motion.div>
+                {/* Right Image */}
+                <div className="relative flex justify-center mb-6 lg:mb-0 lg:col-span-5 order-1 lg:order-2">
+                    
+                    {/* Floating Background Patch */}
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.8 }} 
+                        animate={{ opacity: 1, scale: 1 }} 
+                        transition={{ duration: 1.2, ease: "easeOut" }} 
+                        className="absolute top-1/2 left-1/2 w-80 h-80 lg:w-[450px] lg:h-[450px] -translate-x-1/2 -translate-y-1/2 bg-blue-200 dark:bg-blue-800 rounded-full transform rotate-12 scale-110 -z-10"
+                    ></motion.div>
+
+                    {/* Animated Image */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 30 }} 
+                        animate={{ opacity: 1, y: 0 }} 
+                        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+                    >
+                        <Image 
+                            src="/images/freelancer-working.png" 
+                            alt="Freelancer working" 
+                            width={500} 
+                            height={500} 
+                            className="max-w-full h-auto relative z-10"
+                            priority
+                        />
+                    </motion.div>
+
+                </div>
             </div>
         </section>
     );
 };
 
 export default HeroSection;
+
