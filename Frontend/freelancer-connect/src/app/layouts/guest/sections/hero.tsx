@@ -47,15 +47,6 @@ const HeroSection: React.FC = () => {
 
                 {/* Right Image */}
                 <div className="relative flex justify-center mb-6 lg:mb-0 lg:col-span-5 order-1 lg:order-2">
-                    
-                    {/* Floating Background Patch */}
-                    <motion.div 
-                        initial={{ opacity: 0, scale: 0.8 }} 
-                        animate={{ opacity: 1, scale: 1 }} 
-                        transition={{ duration: 1.2, ease: "easeOut" }} 
-                        className="absolute top-1/2 left-1/2 w-80 h-80 lg:w-[450px] lg:h-[450px] -translate-x-1/2 -translate-y-1/2 bg-blue-200 dark:bg-blue-800 rounded-full transform rotate-12 scale-110 -z-10"
-                    ></motion.div>
-
                     {/* Animated Image */}
                     <motion.div 
                         initial={{ opacity: 0, y: 30 }} 
