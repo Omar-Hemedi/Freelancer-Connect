@@ -14,13 +14,31 @@ const GuestNavbar: React.FC = () => {
     return (
         <nav className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 z-50 shadow-md">
             <div className="flex justify-between items-center mx-auto max-w-screen-xl">
+
                 {/* Left Section - Logo */}
-                <Link href="#" className="text-xl font-semibold whitespace-nowrap dark:text-white">
+                <Link href="/" className="text-xl font-semibold whitespace-nowrap dark:text-white">
                     Freelancer<span className="text-blue-600">Connect</span>
                 </Link>
 
-                {/* Right Section - Buttons & Menu */}
+                {/* Middle Section - Navigation Links (Visible on Large Screens) */}
+                <div className="hidden lg:flex space-x-8">
+                    <Link href="/" className="text-gray-700 hover:text-blue-600 dark:text-white">
+                        Home
+                    </Link>
+                    <Link href="/company" className="text-gray-700 hover:text-blue-600 dark:text-white">
+                        Features
+                    </Link>
+                    <Link href="/marketplace" className="text-gray-700 hover:text-blue-600 dark:text-white">
+                        How it works
+                    </Link>
+                    <Link href="/features" className="text-gray-700 hover:text-blue-600 dark:text-white">
+                        FAQs
+                    </Link>
+                </div>
+
+                {/* Right Section - Buttons & Mobile Menu */}
                 <div className="flex items-center gap-x-2">
+                    {/* Auth Buttons (Visible on Large Screens) */}
                     <Link href="#" className="hidden sm:block text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">
                         Log in
                     </Link>
@@ -46,7 +64,7 @@ const GuestNavbar: React.FC = () => {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu (Hidden on Larger Screens) */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
