@@ -11,10 +11,14 @@ const GuestNavbar: React.FC = () => {
         closed: { opacity: 0, y: "-100%", transition: { duration: 0.3 } },
     };
 
+    // Function to close the mobile menu after clicking a link
+    const closeMobileMenu = () => {
+        setIsOpen(false);
+    };
+
     return (
         <nav className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 z-50 shadow-md">
             <div className="flex justify-between items-center mx-auto max-w-screen-xl">
-
                 {/* Left Section - Logo */}
                 <Link href="/" className="text-xl font-semibold whitespace-nowrap dark:text-white">
                     Freelancer<span className="text-blue-600">Connect</span>
@@ -22,16 +26,16 @@ const GuestNavbar: React.FC = () => {
 
                 {/* Middle Section - Navigation Links (Visible on Large Screens) */}
                 <div className="hidden lg:flex space-x-8">
-                    <Link href="/" className="text-gray-700 hover:text-blue-600 dark:text-white">
+                    <Link href="#home" className="text-gray-700 hover:text-blue-600 dark:text-white" onClick={closeMobileMenu}>
                         Home
                     </Link>
-                    <Link href="/company" className="text-gray-700 hover:text-blue-600 dark:text-white">
+                    <Link href="#features" className="text-gray-700 hover:text-blue-600 dark:text-white" onClick={closeMobileMenu}>
                         Features
                     </Link>
-                    <Link href="/marketplace" className="text-gray-700 hover:text-blue-600 dark:text-white">
+                    <Link href="#how-it-works" className="text-gray-700 hover:text-blue-600 dark:text-white" onClick={closeMobileMenu}>
                         How it works
                     </Link>
-                    <Link href="/features" className="text-gray-700 hover:text-blue-600 dark:text-white">
+                    <Link href="#faqs" className="text-gray-700 hover:text-blue-600 dark:text-white" onClick={closeMobileMenu}>
                         FAQs
                     </Link>
                 </div>
@@ -76,32 +80,32 @@ const GuestNavbar: React.FC = () => {
                     >
                         <ul className="flex flex-col mt-4 font-medium">
                             <li>
-                                <Link href="/" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                <Link href="#home" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={closeMobileMenu}>
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/company" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                <Link href="#features" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={closeMobileMenu}>
                                     Features
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/marketplace" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                <Link href="#how-it-works" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={closeMobileMenu}>
                                     How it works
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/features" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                <Link href="#faqs" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={closeMobileMenu}>
                                     FAQs
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                <Link href="#" className="block py-2 px-4 text-gray-700 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={closeMobileMenu}>
                                     Log in
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="block py-2 px-4 text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700">
+                                <Link href="#" className="block py-2 px-4 text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700" onClick={closeMobileMenu}>
                                     Get started
                                 </Link>
                             </li>
