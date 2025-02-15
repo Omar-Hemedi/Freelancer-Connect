@@ -25,12 +25,12 @@ const Footer: React.FC = () => {
                             </h2>
                             <ul className="text-gray-600 dark:text-gray-400">
                                 <li className="mb-2">
-                                    <Link href="" className="hover:text-gray-900 dark:hover:text-white">
+                                    <Link href="#features" className="hover:text-gray-900 dark:hover:text-white">
                                         Features
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="" className="hover:text-gray-900 dark:hover:text-white">
+                                    <Link href="#how-it-works" className="hover:text-gray-900 dark:hover:text-white">
                                         How It Works
                                     </Link>
                                 </li>
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                     <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                         © {new Date().getFullYear()}{" "}
                         <Link href="/" className="hover:underline hover:text-gray-900 dark:hover:text-white">
-                            FreelancerConnect™
+                            Omar Hemedi™
                         </Link>
                         . All Rights Reserved.
                     </span>
